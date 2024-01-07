@@ -93,3 +93,4 @@ console.log(person)
 
 console.log(person.firstName, person.lastName);
 console.log(person.hobbies[1]);
+console.log(person.address.street)
