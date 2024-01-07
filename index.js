@@ -107,7 +107,6 @@ console.log(person);
 /* 
 //! Array of Objects 
 
-*/
 const todos = [
   {
     id: 1,
@@ -122,25 +121,65 @@ const todos = [
   {
     id: 3,
     task: "Meeting with boss",
-    isCompleted: false,
+    isCompleted: true,
   },
 ];
 
-console.log(todos[1].task);
+//console.log(todos[1].task);
 const todoJSON = JSON.stringify(todos)
-console.log(todoJSON);
+//console.log(todoJSON);
 // loops => For loop
 for (let i = 0; i < 10; i++){
-  console.log(`for loop number:${i}`);
+ // console.log(`for loop number:${i}`);
 }
 // loops => While loop
 
 let i = 0
 while (i < 10) {
-  console.log(`while loop number:${i}`);
+  //console.log(`while loop number:${i}`);
+  i++
 }
 // Arrays Looping
 
-for (let h = 0; h < todos, length; h++){
-console.log(todos[h].task);
+for (let h = 0; h < todos.length; h++){
+  console.log(todos[h]);
 };
+// Arrays Looping with for of
+
+for (let todo of todos) {
+  console.log(todo.id);
+}
+// High oder Array methods #forEach, #map, #filter
+
+todos.forEach((todo) => {
+  console.log(todo.isCompleted)
+})
+
+const todoTask = todos.map((todo) => {
+  return todo.task
+})
+
+console.log(todoTask);
+
+const todoCompleted = todos.filter((todo) => {
+  return todo.isCompleted === true
+}).map((todo) => {
+  return todo.task
+})
+console.log(todoCompleted)
+*/
+
+/* 
+// Conditional statements
+const x = 7;
+const y = 10
+if (x > 5 || y < 11) {
+console.log('x is greater than 5 or y is less than 11');
+}
+
+if (x > 5 && y > 8) {
+  console.log('X is greater than 5 and y is greater than 8');
+}
+
+*/
+
