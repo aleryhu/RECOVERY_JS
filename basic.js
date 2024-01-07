@@ -171,6 +171,7 @@ console.log(todoCompleted)
 
 /* 
 // Conditional statements
+
 const x = 7;
 const y = 10
 if (x > 5 || y < 11) {
@@ -181,5 +182,35 @@ if (x > 5 && y > 8) {
   console.log('X is greater than 5 and y is greater than 8');
 }
 
+// Ternary operator
+
+const f = 6
+const colour = f > 5 ? 'Red' : 'pink';
+console.log(colour);
+
+// Switch statements
+switch (colour) {
+  case 'Red':
+    console.log('Colour is Red');
+    break;
+  case 'pink':
+    console.log('Colour is Pink');
+    break;
+  default:
+    console.log('Colour is not Red or Pink');
+}
 */
 
+
+//FUNCTIONS
+function addnum(num1, num2) {
+  return num1 + num2
+}
+const answer = addnum(4, 6)
+console.log(answer);
+ 
+// Arrow Functions
+const subnum = (h, k) => { 
+  return h - k;
+}
+console.log(subnum(10,4));
