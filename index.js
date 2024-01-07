@@ -75,9 +75,6 @@ console.log(fruits);
 
 /* 
 //! Objects 
-
-*/
-
 const person = {
   firstName: "Aliyu",
   lastName: "Abdullahi",
@@ -89,8 +86,61 @@ const person = {
     state: "Niger state",
   },
 };
-console.log(person)
+console.log(person);
 
 console.log(person.firstName, person.lastName);
 console.log(person.hobbies[1]);
-console.log(person.address.street)
+console.log(person.address.street);
+
+const {
+  firstName,
+  lastName,
+  address: { city },
+} = person;
+console.log(lastName, city);
+// Adding to an object 
+person.email = 'aleryhuabdullahi@gmail.com';
+
+console.log(person);
+*/
+
+/* 
+//! Array of Objects 
+
+*/
+const todos = [
+  {
+    id: 1,
+    task: "Take out the trash",
+    isCompleted: false,
+  },
+  {
+    id: 2,
+    task: "Go to the therapist",
+    isCompleted: true,
+  },
+  {
+    id: 3,
+    task: "Meeting with boss",
+    isCompleted: false,
+  },
+];
+
+console.log(todos[1].task);
+const todoJSON = JSON.stringify(todos)
+console.log(todoJSON);
+// loops => For loop
+for (let i = 0; i < 10; i++){
+  console.log(`for loop number:${i}`);
+}
+// loops => While loop
+
+let i = 0
+while (i < 10) {
+  console.log(`while loop number:${i}`);
+}
+// Arrays Looping
+
+for (let h = 0; h < todos, length; h++){
+console.log(todos[h].task);
+};
