@@ -1,51 +1,51 @@
 const companies = [
   {
-    name: "Company One",
+    name: "Palmpay",
     category: "Finance",
     start: 1890,
     end: 1980,
   },
   {
-    name: "Company Two",
+    name: "Adiddas",
     category: "Retail",
     start: 1890,
     end: 1899,
   },
   {
-    name: "Company Three",
+    name: "Tesla",
     category: "Auto",
     start: 1860,
     end: 1890,
   },
   {
-    name: "Company Four",
+    name: "Asus",
     category: "Technology",
     start: 1800,
     end: 1900,
   },
   {
-    name: "Company Five",
+    name: "Nike",
     category: "Retail",
     start: 1950,
     end: 1990,
   },
   {
-    name: "Company Six",
+    name: "Zap",
     category: "Finance",
     start: 1940,
     end: 1980,
   },
   {
-    name: "Company Seven",
+    name: "Alienware",
     category: "Technology",
     start: 2015,
     end: 2023,
   },
   {
-    name: "Company Eight",
+    name: "Remac",
     category: "Auto",
     start: 2000,
-    end: 2015,
+    end: 2016,
   },
 ];
 
@@ -97,6 +97,7 @@ const lastedTenYears = companies.filter(company => (company.end - company.start 
 console.log(lastedTenYears);
  */
 
+/* 
 // Map Method
 
 const companyNames = companies.map((company) => {
@@ -116,3 +117,52 @@ console.log(squaredAges);
 const agePlusTwo = ages.map(age => age + 2)
 console.log(agePlusTwo);
 
+
+ */
+// Sort Method
+
+
+// Sort Companies name Alphabetically
+const sortedCompany = companies.sort(function (a, b) {
+  return a.name < b.name ? 1 : -1;
+})
+
+// Sort Companies Category Alphabetically
+const sortedCompanies = companies.sort((a, b) => {
+  if (a.category > b.category) {
+    return 1;
+  } else {
+    return -1;
+  }
+});
+console.log(sortedCompanies);
+
+const sortedAges = ages.sort((a, b) => {
+  return (a > b ? 1 : -1);
+});
+console.log(sortedAges);
+
+
+// Reduce
+
+/* 
+const ageSum = ages.reduce((a, b) => {
+  return a + b;
+}, 0);
+console.log(ageSum);
+
+const totalRange = companies.reduce((a, b) => {
+  return a + (b.end - b.start);
+}, 0);
+*/
+
+const totalRange = companies.reduce((a, b) => a + (b.end - b.start), 0);
+console.log(totalRange);
+
+const combined = ages
+  .map((age) => age * 3)
+  .filter((age) => age >= 24)
+  .sort((a, b) => a - b)
+  .reduce((a, b) => a + b, 0);
+
+  console.log(combined);
